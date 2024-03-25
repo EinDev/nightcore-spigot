@@ -28,8 +28,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.5
 
-      - name: Publish package (only Engine, not plugin)
+      - name: Publish package
         run: mvn --batch-mode deploy
-        working-directory: ./nex-engine
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
